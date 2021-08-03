@@ -25,3 +25,6 @@ data<-read.csv("iris.csv")
 #look at the structure of your data
 str(data)
 
+#summarize your data
+summary(data)
+
