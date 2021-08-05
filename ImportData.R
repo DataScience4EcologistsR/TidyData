@@ -16,6 +16,14 @@ data<-read.csv("iris.csv", header=T,sep=",")
 
 
 
+
+
+
+
+
+
+
+
 #get information in the R sesission
 #install.packages("devtools") # we'll get into installing and loading packages in the next video
 require(devtools) 
