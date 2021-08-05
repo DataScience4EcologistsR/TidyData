@@ -1,21 +1,21 @@
+# clear global environment
+rm(list = ls())
+
+
 # check the class of a variable
 someText<- c("This", "is", "some", "text")
 str(someText)
 
 
 # some other variables
-
 someNumber<- 5
 someOtherNumber <- 2
-
 str(someNumber)
 
 # This is numeric, this means we can do math with it! 
-
 someNumber + someOtherNumber
 
-# with ccharachter strings we can't do math
-
+# with charachter strings we can't do math
 someText * 2
 
 
@@ -45,6 +45,8 @@ str(sites)
 #load the data
 data<-read.csv("iris.csv", header=T,sep=",")
 
+#look at the first rows of your data
+head(data)
 
 #look at the structure of your data
 str(data)

@@ -10,19 +10,10 @@ setwd("~/Documents/GitHub/TidyData")
 # read data
 data<-read.csv("iris.csv", header=T,sep=",")
 
-#look at the structure of your data
-str(data)
-
-#summarize your data
-summary(data)
-
-# change the class of a vector
-sex<- c(1,2,2,1,1,2,1,1)
-str(sex)
 
 
-sex<-as.factor(sex)
-str(sex)
+
+
 
 
 #get information in the R sesission
