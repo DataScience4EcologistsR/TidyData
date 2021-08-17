@@ -1,14 +1,14 @@
-# clear global environment
+# clear global environment - this does not clear loaded packages:
+# it's good practice to always start a new R sesison
+
 rm(list = ls())
 
-#get working directory
-getwd()
-
-#set working directory
-setwd("~/Documents/GitHub/TidyData")
 
 # read data
-data<-read.csv("iris.csv", header=T,sep=",")
+data<-read.csv("Datasets/iris.csv", header=T,sep=",")
+
+
+
 
 
 
@@ -26,7 +26,7 @@ data<-read.csv("iris.csv", header=T,sep=",")
 
 #get information in the R sesission
 #install.packages("devtools") # we'll get into installing and loading packages in the next video
-require(devtools) 
+library(devtools) 
 session_info()
 
 # ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────
