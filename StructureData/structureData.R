@@ -27,28 +27,26 @@ someNumber * a
 a<- as.numeric(a)
 someNumber * a
 
-#set the working directory
-setwd("~/Documents/GitHub/TidyData")
 
 #load the data
-data<-read.csv("plant_height.csv", header=T,sep=",")
+dt<-read.csv("Datasets/plant_height.csv", header=T,sep=",")
 
 #look at the first rows of your data
-head(data)
+head(dt)
 
 #load the data
-data<-read.csv("plant_height.csv", header=T,sep=";")
+dt<-read.csv("Datasets/plant_height.csv", header=T,sep=";")
 
 
 #look at the structure of your data
-str(data)
+str(dt)
 
-data$site<-as.factor(data$site)
-data$year<-as.factor(data$year)
-data$plot<-as.factor(data$plot)
+dt$site<-as.factor(dt$site)
+dt$year<-as.factor(dt$year)
+dt$plot<-as.factor(dt$plot)
 
 #summarize your data
-summary(data)
+summary(dt)
 
 
 
