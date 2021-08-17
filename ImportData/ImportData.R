@@ -4,11 +4,12 @@
 rm(list = ls())
 
 
+
 # read data
 data<-read.csv("Datasets/iris.csv", header=T,sep=",")
 
-
-
+#set the working directory
+#setwd("~/Documents/GitHub/TidyData")
 
 
 
