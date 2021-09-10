@@ -42,15 +42,11 @@ dt<-read.csv("Datasets/plant_height.csv", header=T,sep=";")
 str(dt)
 
 dt$site<-as.factor(dt$site)
-dt$year<-as.factor(dt$year)
+dt$species<-as.factor(dt$species)
 dt$plot<-as.factor(dt$plot)
 
 #summarize your data
 summary(dt)
-
-
-
-
 
 # 
 # 

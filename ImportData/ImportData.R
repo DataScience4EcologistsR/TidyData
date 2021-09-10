@@ -6,11 +6,11 @@ rm(list = ls())
 
 
 # read data
-dt<-read.csv("Datasets/tidydata.csv", header=T)
+dt<-read.csv("Datasets/plant_height.csv", header=T)
 
 # use the right separator
 
-dt<-read.csv("Datasets/tidydata.csv", header=T, sep=";")
+dt<-read.csv("Datasets/plant_height.csv", header=T, sep=";")
 
 
 
