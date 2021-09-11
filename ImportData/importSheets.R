@@ -15,15 +15,23 @@ dt <- do.call("rbind", site_list1)
 head(dt)
 
 # oh dear it's a mess!! 
-# let's do one step at the time
+# let's do one step at the time - how to deal with the Na's first
 
 #to deal with  messy data we will use the tidyverse, which is a collection of packages 
+
 install.packages("tidyverse")
 library(tidyverse)
 
 dt <-  dt %>% fill(site)
 
-write.csv(dt,"Datasets/all_sites.csv")
+#there are other types of NA's to deal with
+
+# sometimes you want to replace them or have values replaced with NA's 
+summary(dt)
+dt$leafarea_year1[dt$leafarea_year1>10]<-NA
+summary(dt)
+
+write.csv(dt,"Datasets/all_sites.csv", row.names=FALSE)
 
 
 
