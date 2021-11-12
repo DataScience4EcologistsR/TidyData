@@ -8,7 +8,7 @@ rm(list = ls())
 # read data
 dt<-read.csv("Datasets/plant_height.csv", header=T)
 
-# use the right separator
+# use the right seperator
 
 dt<-read.csv("Datasets/plant_height.csv", header=T, sep=";")
 
