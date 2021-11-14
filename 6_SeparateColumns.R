@@ -19,18 +19,18 @@ head(dt)
 str(dt)
 
 dt<-dt%>% mutate_if(is.character,as.numeric)
+
 #hm....it's still not tidy...
-# year is spread across multiple coloumns
+# year is spread across multiple columns
 
+# what if a variable is pread across multiple coloumns? 
 
-
-
-dt<- dt %>% pivot_longer(c(4,6,8),names_to = "year",values_to = "height", 
+dt2<- dt %>% pivot_longer(c(4,6,8),names_to = "year",values_to = "height", 
                           names_prefix="height_year")
 
-# We could do this for each variable seperately but we can also combine them
+# We could do this for each variable separately but we can also combine them
 
-dt<-dt %>% pivot_longer(
+dt3<-dt %>% pivot_longer(
   cols = 4:12,
   names_to = c( "measurment","year"), 
   names_pattern = "(.*)_year(.)",
@@ -39,7 +39,7 @@ dt<-dt %>% pivot_longer(
 
 # in a second step make it wider again
 
-dt2<-dt %>% pivot_wider(
+dt4<-dt3 %>% pivot_wider(
   names_from = c( "measurment"), 
   values_from = "value"
 )
