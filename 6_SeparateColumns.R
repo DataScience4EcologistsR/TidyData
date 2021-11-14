@@ -10,7 +10,7 @@ dt<-read.csv("Datasets/all_sites.csv", header=T,sep=",")
 #check data
 head(dt)
 
-# height and width is in the same coloumn- let's separate it! 
+# height and width is in the same column- let's separate it! 
 dt<- dt%>% separate(heightwidth_year1, c("height_year1", "width_year1"), sep=",", )
 dt<- dt%>% separate(heightwidth_year2, c("height_year2", "width_year2"), sep=",", )
 dt<- dt%>% separate(heightwidth_year3, c("height_year3", "width_year3"), sep=",", )
