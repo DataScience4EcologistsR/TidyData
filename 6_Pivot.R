@@ -33,4 +33,5 @@ dt4<-dt3 %>% pivot_wider(
   values_from = "value"
 )
 
+write.csv(dt4,"Output/all_sites_pivot.csv" , row.names=F)
 
