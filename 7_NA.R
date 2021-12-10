@@ -10,7 +10,10 @@ dt<-read.csv("Output/all_sites_pivot_NA.csv", header=T,sep=",")
 
 # replace certain values  as  NA
 dt[dt=="na"]<-NA
-dt$site[dt$site=="0"]<-NA
+dt$year[dt$year=="0"]<-NA
+
+summary(dt)
+is.na(dt)
 
 #check data
 head(dt)
@@ -18,6 +21,12 @@ summary(dt)
 
 is.na(dt)
 
-# fill() if e.g. species is  misisng
+# only keep complete cases
+
+dt_complete<-dt[complete.cases(dt),]
+# fill() if e.g.
+
+dt %>% fill(species)
+
 
 
