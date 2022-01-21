@@ -1,4 +1,4 @@
-### Some of the most important function: this is going to be 6
+### Some of the most important data wrangling functions
 
 # clear global environment
 rm(list  = ls())
@@ -16,12 +16,13 @@ head(dt)
 # select() is used to select some columns
 year1<- dt%>% select(site, species, treatment, height_year1,width_year1,leafarea_year1 )
 year1<- dt%>% select(1:5,10)
+year1<- dt%>% select(-c(6:9), -c(11:12))
 
 # filter() filters rows based on their values
 site1<- dt %>% filter(site==1)
 treatment1<- dt %>% filter(treatment==1)
 
-treatment1_site2<- dt %>% filter(treatment==1 & site==2)
+treatment1_site2<- dt %>% filter(treatment==1 | site==2)
 
 
 
