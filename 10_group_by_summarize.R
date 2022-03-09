@@ -28,7 +28,7 @@ dt %>% group_by(year, treatment) %>% summarise(n=n_distinct(species))
 
 
 # Normalize by group mean
-dt_norm<- dt %>% group_by(species,treatment,year) %>% mutate(height_norm= height - median(height))
+dt_norm<- dt %>% group_by(species,treatment,year) %>% mutate(height_norm= height - mean(height))
 
 
 
