@@ -6,6 +6,9 @@ library(tidyverse)
 
 #load data
 dt<- read.csv("Output/all_sites_pivot.csv",sep=",")
+
+str(dt)
+
 dt$site<- as.factor(dt$site)
 dt$year<- as.factor(dt$year)
 dt$treatment<- as.factor(dt$treatment)
@@ -14,7 +17,7 @@ dt$species<-as.factor(dt$species)
 sites<- data.frame(site = as.factor(seq(1:3)), elevation=c(412,616,825),openness_index = c(8,6,6))
       
 # merging/joining data with sites information using the common ID site
-# all entries from L but only those observations from R whose key (ID) is in L.
+# all entries from L but only those observations from R whose  ID is in L.
 dt_sites<- dt %>% left_join(sites, by= c("site" = "site"))
 
 head(dt_sites)
